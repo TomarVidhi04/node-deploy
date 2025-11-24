@@ -3,12 +3,14 @@ const express = require('express')
 const app = express()
 const port =process.env.PORT
 
+const myData = { name: "Vidhi", age: 20 };
+
 app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
 app.get('/about' , (req,res) => {
-    res.send("hello about")
+    res.json(myData)
 })
 
 app.get('/login' , (req,res) => {
